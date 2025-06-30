@@ -1,0 +1,22 @@
+<!-- public/404.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // 获取当前路径
+      const path = window.location.pathname;
+      
+      // 重定向到主页面
+      const redirectPath = path.startsWith('/caffle_system') 
+        ? path 
+        : `/your-repo-name${path}`;
+      
+      window.location.replace(`${window.location.origin}${redirectPath}`);
+    </script>
+  </head>
+  <body>
+    <h1>Redirecting to application...</h1>
+  </body>
+</html>
